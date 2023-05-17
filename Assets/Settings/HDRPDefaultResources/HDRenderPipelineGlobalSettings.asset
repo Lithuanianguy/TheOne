@@ -65,7 +65,11 @@ MonoBehaviour:
     type: 2}
   m_RenderPipelineRayTracingResources: {fileID: 0}
   beforeTransparentCustomPostProcesses: []
-  beforePostProcessCustomPostProcesses: []
+  beforePostProcessCustomPostProcesses:
+  - UnityEngine.Rendering.HighDefinition.Compositor.ChromaKeying, Unity.RenderPipelines.HighDefinition.Runtime,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - UnityEngine.Rendering.HighDefinition.Compositor.AlphaInjection, Unity.RenderPipelines.HighDefinition.Runtime,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   afterPostProcessBlursCustomPostProcesses: []
   afterPostProcessCustomPostProcesses: []
   beforeTAACustomPostProcesses: []
@@ -99,8 +103,8 @@ MonoBehaviour:
     serializedBounds:
     - sceneGUID: 8124e5870f4fd4c779e7a5f994e84ad1
       bounds:
-        m_Center: {x: 0, y: 40.5, z: 0}
-        m_Extent: {x: 81, y: 40.5, z: 81}
+        m_Center: {x: 97.5, y: 37.5, z: 0}
+        m_Extent: {x: 127.5, y: 52.5, z: 90}
     serializedHasVolumes:
     - sceneGUID: 8124e5870f4fd4c779e7a5f994e84ad1
       hasProbeVolumes: 1
@@ -112,14 +116,14 @@ MonoBehaviour:
       settings:
         dilationSettings:
           enableDilation: 1
-          dilationDistance: 1
+          dilationDistance: 5
           dilationValidityThreshold: 0.25
           dilationIterations: 1
           squaredDistWeighting: 1
         virtualOffsetSettings:
           useVirtualOffset: 1
           outOfGeoOffset: 0.01
-          searchMultiplier: 0.2
+          searchMultiplier: 1
     serializedBakingSets:
     - name: Default
       sceneGUIDs:
@@ -127,13 +131,13 @@ MonoBehaviour:
       settings:
         dilationSettings:
           enableDilation: 1
-          dilationDistance: 1
+          dilationDistance: 5
           dilationValidityThreshold: 0.25
           dilationIterations: 1
           squaredDistWeighting: 1
         virtualOffsetSettings:
           useVirtualOffset: 1
           outOfGeoOffset: 0.01
-          searchMultiplier: 0.2
+          searchMultiplier: 1
       profile: {fileID: 11400000, guid: 7999bbdff17c2d24b850deba4085fe3e, type: 2}
   m_Version: 3
