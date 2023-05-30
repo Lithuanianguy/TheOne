@@ -127,6 +127,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2144482936687222870}
     m_Modifications:
+    - target: {fileID: 2471454168807947867, guid: 3a94417edc1f73043836e43d6a98b978,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6751428012843480485, guid: 53a7d45bdf6b3624eac161832fa3fc37,
+        type: 3}
     - target: {fileID: 7438434463341396874, guid: 3a94417edc1f73043836e43d6a98b978,
         type: 3}
       propertyPath: m_RootOrder
