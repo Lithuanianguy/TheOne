@@ -19,7 +19,13 @@ public class FirstPersonController : MonoBehaviour
     public float cameraSpeed = 1.0f;
     public Transform cam;
     public float rayDistance;
-    RaycastHit hit;
+
+    public bool canMove = true;
+
+    [Header("Interaction")]
+    [SerializeField] private LayerMask interactionLayer;
+    [SerializeField] private float interactionRange;
+    [SerializeField] private InteractableObject interactableObject;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +36,14 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        v = Input.GetAxis("Vertical");
-        h = Input.GetAxis("Horizontal");
+        if (canMove)
+        {
+            v = Input.GetAxis("Vertical");
+            h = Input.GetAxis("Horizontal");
+
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
+        }
 
         move.x = h;
         move.z = v;
@@ -48,9 +60,6 @@ public class FirstPersonController : MonoBehaviour
             speed = walkingSpeed;
         }
 
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
-
         rotateCam.x = mouseY;
         rotateBody.y = mouseX;
 
@@ -58,16 +67,32 @@ public class FirstPersonController : MonoBehaviour
 
         transform.Rotate(rotateBody * Time.deltaTime * cameraSpeed);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canMove)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))
-            {
-                if (hit.collider.gameObject.tag == "Heart")
-                {
-                    Destroy(hit.collider.gameObject);
-                }
+            //if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, rayDistance))
+            //{
+            //    if (hit.collider.gameObject.tag == "Heart")
+            //    {
+            //        Destroy(hit.collider.gameObject);
+            //    }
                
+            //}
+            if (interactableObject)
+            {
+                interactableObject.OnInteract(this);
             }
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, interactionRange, interactionLayer))
+        {
+            interactableObject = hit.collider.GetComponent<InteractableObject>();
+
+        }
+        else
+        {
+            interactableObject = null;
         }
     }
 
