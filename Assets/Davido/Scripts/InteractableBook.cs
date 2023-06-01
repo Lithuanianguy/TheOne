@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class InteractableBook : InteractableObject
 {
-    FirstPersonController player;
+    
 
     public GameObject uiElement;
 
@@ -16,7 +16,7 @@ public class InteractableBook : InteractableObject
 
     public override void OnInteract(FirstPersonController fpController)
     {
-        player = fpController;
+        base.OnInteract(fpController);
         player.canMove = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
@@ -21,6 +22,12 @@ public class FirstPersonController : MonoBehaviour
     public float rayDistance;
 
     public bool canMove = true;
+
+    public GameObject eToInteract;
+
+
+    public int heartPiece;
+
 
     [Header("Interaction")]
     [SerializeField] private LayerMask interactionLayer;
@@ -67,18 +74,12 @@ public class FirstPersonController : MonoBehaviour
 
         transform.Rotate(rotateBody * Time.deltaTime * cameraSpeed);
 
-        if (Input.GetButtonDown("Fire1") && canMove)
+        if (Input.GetKeyDown(KeyCode.E) && canMove)
         {
-            //if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, rayDistance))
-            //{
-            //    if (hit.collider.gameObject.tag == "Heart")
-            //    {
-            //        Destroy(hit.collider.gameObject);
-            //    }
-               
-            //}
+            
             if (interactableObject)
             {
+               
                 interactableObject.OnInteract(this);
             }
         }
@@ -87,12 +88,23 @@ public class FirstPersonController : MonoBehaviour
     {
         if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, interactionRange, interactionLayer))
         {
-            interactableObject = hit.collider.GetComponent<InteractableObject>();
+            if(hit.collider.GetComponent<InteractableObject>() && hit.collider.GetComponent<InteractableObject>().canInteract)
+            {
+                interactableObject = hit.collider.GetComponent<InteractableObject>();
+                eToInteract.SetActive(true);
+            }
+            else
+            {
+                eToInteract.SetActive(false);
+                interactableObject = null;
 
+            }
         }
         else
         {
+            eToInteract.SetActive(false);
             interactableObject = null;
+            
         }
     }
 
