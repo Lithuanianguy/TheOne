@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class InteractableMaria : InteractableObject
 {
    
     public Animator stairWay;
+    public Animator heartComplete;
+    public GameObject theHeart;
+
     
 
     // Start is called before the first frame update
@@ -25,6 +27,8 @@ public class InteractableMaria : InteractableObject
         {
             stairWay.SetBool("CanGo", true);
             canInteract = false;
+            theHeart.SetActive(true);
+            heartComplete.SetBool("MariaFull", true);
         }
         else
         {
