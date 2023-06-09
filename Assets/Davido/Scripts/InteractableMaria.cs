@@ -9,6 +9,7 @@ public class InteractableMaria : InteractableObject
     public Animator stairWay;
     public Animator heartComplete;
     public GameObject theHeart;
+    public GameObject col;
 
     
 
@@ -29,6 +30,7 @@ public class InteractableMaria : InteractableObject
             canInteract = false;
             theHeart.SetActive(true);
             heartComplete.SetBool("MariaFull", true);
+            col.SetActive(false);
         }
         else
         {
