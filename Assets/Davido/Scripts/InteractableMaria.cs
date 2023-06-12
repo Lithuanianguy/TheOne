@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class InteractableMaria : InteractableObject
 {
-   
+    public Animator spotLight;
     public Animator stairWay;
     public Animator heartComplete;
     public GameObject theHeart;
     public GameObject col;
-
+    
     
 
     // Start is called before the first frame update
@@ -30,6 +31,8 @@ public class InteractableMaria : InteractableObject
             canInteract = false;
             theHeart.SetActive(true);
             heartComplete.SetBool("MariaFull", true);
+
+            spotLight.SetBool("off", true);
             col.SetActive(false);
         }
         else

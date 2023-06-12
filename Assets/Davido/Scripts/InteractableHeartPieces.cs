@@ -6,6 +6,8 @@ using UnityEngine;
 public class InteractableHeartPieces : InteractableObject
 
 {
+    public Animator side;
+    public Animator spotLight;
     
 
     public override void OnInteract(FirstPersonController fpController)
@@ -15,8 +17,8 @@ public class InteractableHeartPieces : InteractableObject
         canInteract = false;
         print("test1");
         Destroy(gameObject);
-
-
+        side.SetBool("Gotit", true);
+        spotLight.SetBool("off", true);
     }
 
 

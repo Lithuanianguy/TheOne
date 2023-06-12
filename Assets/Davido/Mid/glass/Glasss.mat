@@ -35,7 +35,7 @@ Material:
   - _MASKMAP
   - _NORMALMAP
   - _NORMALMAP_TANGENT_SPACE
-  - _REFRACTION_SPHERE
+  - _REFRACTION_PLANE
   - _SURFACE_TYPE_TRANSPARENT
   - _THICKNESSMAP
   m_InvalidKeywords: []
@@ -227,7 +227,7 @@ Material:
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
-    - _RefractionModel: 2
+    - _RefractionModel: 1
     - _Smoothness: 1
     - _SmoothnessRemapMax: 0.24559394
     - _SmoothnessRemapMin: 0
