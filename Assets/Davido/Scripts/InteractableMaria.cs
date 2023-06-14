@@ -8,6 +8,7 @@ public class InteractableMaria : InteractableObject
 {
     public Animator spotLight;
     public Animator stairWay;
+    public AudioSource choir;
     public Animator heartComplete;
     public GameObject theHeart;
     public GameObject col;
@@ -31,7 +32,7 @@ public class InteractableMaria : InteractableObject
             canInteract = false;
             theHeart.SetActive(true);
             heartComplete.SetBool("MariaFull", true);
-
+            choir.Play();
             spotLight.SetBool("off", true);
             col.SetActive(false);
         }

@@ -18,7 +18,7 @@ public class InteractableHeartPieces : InteractableObject
         print("test1");
         Destroy(gameObject);
         side.SetBool("Gotit", true);
-        spotLight.SetBool("off", true);
+      
     }
 
 

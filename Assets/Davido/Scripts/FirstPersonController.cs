@@ -13,18 +13,19 @@ public class FirstPersonController : MonoBehaviour
     public Vector3 move;
     public Vector3 rotateCam;
     public Vector3 rotateBody;
-    public bool isRunning = false;
     public float speed = 1.0f;
-    public float runningSpeed = 1.0f;
     public float walkingSpeed = 1.0f;
     public float cameraSpeed = 1.0f;
     public Transform cam;
     public float rayDistance;
-
     public bool canMove = true;
 
     public GameObject eToInteract;
 
+    public AudioSource footStep;
+
+    private float steptime;
+    public float stepTimeDelay;
 
     public int heartPiece;
 
@@ -43,6 +44,8 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (canMove)
         {
             v = Input.GetAxis("Vertical");
@@ -57,15 +60,7 @@ public class FirstPersonController : MonoBehaviour
 
         transform.Translate(move * Time.deltaTime * speed);
 
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            isRunning = true;
-            speed = runningSpeed;
-        }else
-        {
-            isRunning = false;
-            speed = walkingSpeed;
-        }
+       
 
         rotateCam.x = mouseY;
         rotateBody.y = mouseX;
@@ -106,9 +101,41 @@ public class FirstPersonController : MonoBehaviour
             interactableObject = null;
             
         }
+
+        if (v != 0 || h != 0)
+        {
+            if(steptime <= 0)
+            {
+
+              
+                footStep.Play();
+                print("walkingsound");
+                steptime = stepTimeDelay;
+
+                footStep.pitch = Random.Range(0.4f, 1f);
+
+
+            }
+
+            else
+            {
+                steptime -= Time.fixedDeltaTime;
+            }
+           
+        }
+        else if (steptime > 0)
+        {
+           // footStep.Play();
+            steptime = 0;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+
+    void start()
     {
         
     }
