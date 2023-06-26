@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000006435207, g: 0.000009528129, b: 0.000022002032,
-    a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10005,6 +10004,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1935237991}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cb8f34e06d3f1841b72c042cb8fd38e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1935237992}
   m_SourcePrefab: {fileID: 100100000, guid: 6cb8f34e06d3f1841b72c042cb8fd38e, type: 3}
 --- !u!1 &342073178
 GameObject:
@@ -44180,6 +44183,7 @@ MonoBehaviour:
   canInteract: 1
   spotLight: {fileID: 1215924331}
   stairWay: {fileID: 1992526754}
+  holding: {fileID: 1935237992}
   choir: {fileID: 1350384749}
   heartComplete: {fileID: 1941575412}
   theHeart: {fileID: 1941575411}
@@ -44205,6 +44209,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12, y: 15.776125, z: 14.357112}
   m_Center: {x: 0, y: -7.3880634, z: 0}
+--- !u!95 &1935237992
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935237988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be81fdd12bf457a40af2ad625f8cdb13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1935933063
 GameObject:
   m_ObjectHideFlags: 0

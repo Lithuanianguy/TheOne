@@ -8,6 +8,9 @@ public class InteractableMaria : InteractableObject
 {
     public Animator spotLight;
     public Animator stairWay;
+
+    public Animator holding;
+
     public AudioSource choir;
     public Animator heartComplete;
     public GameObject theHeart;
@@ -29,9 +32,16 @@ public class InteractableMaria : InteractableObject
         if (player.heartPiece >= 2)
         {
             stairWay.SetBool("CanGo", true);
+
             canInteract = false;
             theHeart.SetActive(true);
+
             heartComplete.SetBool("MariaFull", true);
+            holding.enabled = true;
+            holding.SetBool("Hold", true);
+            holding.SetBool("Close", false);
+
+
             choir.Play();
             spotLight.SetBool("off", true);
             col.SetActive(false);
