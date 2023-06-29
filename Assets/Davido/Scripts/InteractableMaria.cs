@@ -11,6 +11,8 @@ public class InteractableMaria : InteractableObject
 
     public Animator holding;
 
+    public Animator[] twins;
+
     public AudioSource choir;
     public Animator heartComplete;
     public GameObject theHeart;
@@ -38,9 +40,12 @@ public class InteractableMaria : InteractableObject
 
             heartComplete.SetBool("MariaFull", true);
             holding.enabled = true;
-            holding.SetBool("Hold", true);
-            holding.SetBool("Close", false);
+            holding.SetTrigger("Hold");
 
+            for (int i = 0; i < twins.Length; i++)
+            {
+                twins[i].SetBool("Active", false);
+            }
 
             choir.Play();
             spotLight.SetBool("off", true);
@@ -59,5 +64,18 @@ public class InteractableMaria : InteractableObject
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.GetComponent<FirstPersonController>())
+            return;
+        holding.SetBool("Close", true);
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.GetComponent<FirstPersonController>())
+            return;
+        holding.SetBool("Close", false);
     }
 }
