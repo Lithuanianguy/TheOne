@@ -11,22 +11,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6701055
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2709731
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.670105
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.267
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
@@ -105,7 +105,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 87b1af85fbbe5964da64704c203a2a36,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7346452367362108662}
+      addedObject: {fileID: 7099869969706911172}
   m_SourcePrefab: {fileID: 100100000, guid: 87b1af85fbbe5964da64704c203a2a36, type: 3}
 --- !u!1 &5103990015871460888 stripped
 GameObject:
@@ -113,7 +113,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5338008219126438729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7346452367362108662
+--- !u!114 &7099869969706911172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,9 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5103990015871460888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179e9b907da0f234a955d572431f3bf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 48ca075c87f72f04a89558baafa40829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  side: {fileID: 0}
-  spotLight: {fileID: 0}

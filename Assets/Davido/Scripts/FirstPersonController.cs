@@ -28,6 +28,7 @@ public class FirstPersonController : MonoBehaviour
     public float stepTimeDelay;
 
     public int heartPiece;
+    public int jesusObject;
 
 
     [Header("Interaction")]

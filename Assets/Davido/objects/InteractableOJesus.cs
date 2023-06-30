@@ -10,6 +10,7 @@ public class InteractableOJesus : InteractableObject
 
     public GameObject theObjects;
     public Animator doorangel;
+    public GameObject theLights;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +29,14 @@ public class InteractableOJesus : InteractableObject
         canInteract = true;
 
         base.OnInteract(fpController);
-        if (player.heartPiece >= 3)
+        if (player.jesusObject >= 3)
         {
+            print("hey");
             theObjects.SetActive(true);
-            //doorangel.SetBool("yes", true);
+
+            theLights.SetActive(false);
+            
+            canInteract=false;
 
         }
        
