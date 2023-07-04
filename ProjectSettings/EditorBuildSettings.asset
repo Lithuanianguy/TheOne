@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Davido/Davido.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/Menu.unity
+    guid: db47d6070e40232469e75c35899a94f4
+  - enabled: 1
+    path: Assets/Church.unity
+    guid: 0ff2b0479f0fec248aa8cb942df49753
   m_configObjects: {}

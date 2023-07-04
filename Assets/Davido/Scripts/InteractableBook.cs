@@ -29,11 +29,12 @@ public class InteractableBook : InteractableObject
 
     public void ReturnToPlayer()
     {
+        book.SetBool("read", true);
         player.canMove = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         spotL.SetBool("Dim", true);
         uiElement.SetActive(false);
-        book.SetBool("read", true);
+        
     }
 }

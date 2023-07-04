@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 263, y: 0.000030517578}
+  m_AnchoredPosition: {x: 263, y: 0}
   m_SizeDelta: {x: -742.236, y: -99.053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8371856097808290613
@@ -196,15 +196,15 @@ MonoBehaviour:
     m_MinSize: 2
     m_MaxSize: 41
     m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.11
   m_Text: "              eath welcomed you \n              with open arms my \n             
-    child. \n\nEveryone who lives in you and practices faith in you shall never die.\n\r\nHe,
-    thy one reading this book.\r Return his heart to me\r\nI mourn in silence as
-    cold as stone\u2026 give me his flesh, give me his heart.\r\n"
+    child. \n\nEveryone who lives in you and practices faith in you shall never die.\n\r\nThe
+    one reading this scrip, who has awaked after a long slumber.\nBring me his heart
+    and the entrance behind the altar will show you the way."
 --- !u!1 &4908650871276443539
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cab007ef6ce905d488f0dbe20e780777, type: 3}
+    m_Font: {fileID: 12800000, guid: 7bce045a0184e93449daa55c407f6c9b, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Done reading.
+  m_Text: CLOSE BOOK
 --- !u!1 &5640558690621162065
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000022888, y: 0}
+  m_AnchoredPosition: {x: -0.000022888, y: 47}
   m_SizeDelta: {x: 1122.1597, y: -381.3547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7378787418491395882
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   uiElement: {fileID: 1614607050005278099}
   invisWall: {fileID: 176869714384449651}
   spotL: {fileID: 553607279415929442}
-  book: {fileID: 0}
+  book: {fileID: 8132188815355882950}
 --- !u!4 &8843323066343419567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9665f56892002f740ae76ab5792e4470,

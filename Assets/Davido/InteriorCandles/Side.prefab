@@ -48,7 +48,7 @@ Transform:
   - {fileID: 6283527060220959119}
   - {fileID: 4910961461030676690}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &746121486925390669
 Animator:
@@ -1578,7 +1578,7 @@ PrefabInstance:
     - target: {fileID: 4247458131728404648, guid: b169a5fdf0fc3ba4c9496623c81fb2b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3091974
+      value: -1.309197
       objectReference: {fileID: 0}
     - target: {fileID: 4247458131728404648, guid: b169a5fdf0fc3ba4c9496623c81fb2b7,
         type: 3}
