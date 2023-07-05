@@ -13,6 +13,9 @@ public class InteractableMaria : InteractableObject
 
     public Animator[] twins;
 
+    public AudioSource turn;
+
+    public AudioSource turn2;
     public AudioSource choir;
     public Animator heartComplete;
     public GameObject theHeart;
@@ -45,8 +48,12 @@ public class InteractableMaria : InteractableObject
             for (int i = 0; i < twins.Length; i++)
             {
                 twins[i].SetBool("Active", false);
+                twins[i].SetBool("Done", true);
             }
 
+
+            turn.Play();
+            turn2.Play();
             choir.Play();
             spotLight.SetBool("off", true);
             col.SetActive(false);
