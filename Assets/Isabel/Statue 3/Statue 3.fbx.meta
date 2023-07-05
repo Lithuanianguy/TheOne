@@ -3,7 +3,37 @@ guid: 70caecaf55279c0448bb31243604dd9a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_ex1
+    second: {fileID: 2100000, guid: 1254833cbe5c9bd46b5238b0ed9dc722, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 0d4c86f851968ef46820fd11474e04bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: ff46581f7634e7142a7f47eae866a067, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: df6003d28b359a0499923ed47f62a5a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PM3D_Sphere3D1_3
+    second: {fileID: 2100000, guid: 1196fe4f4b03c854b95e14ffafec4093, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PM3D_Sphere3D2
+    second: {fileID: 2100000, guid: fa39edde2aa5b034ab1733192696ff37, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
