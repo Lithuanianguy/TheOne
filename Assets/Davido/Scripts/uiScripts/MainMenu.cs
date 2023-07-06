@@ -17,6 +17,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Church");
     }
 
+    public void End()
+    {
+        SceneManager.LoadScene("End");
+    }
+
+    public void Main()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
