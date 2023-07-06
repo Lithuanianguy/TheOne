@@ -18,6 +18,7 @@ public class InteractableHeartPieces : InteractableObject
         print("test1");
         Destroy(gameObject);
         got.Play();
+        side.SetBool("Gotit", true);
       
     }
 

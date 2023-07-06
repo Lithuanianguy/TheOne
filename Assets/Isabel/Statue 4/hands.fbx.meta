@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Head Puulde
+    second: {fileID: 2100000, guid: 5aff200759853fa4eb97cee9c0d3aa68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Head hands
     second: {fileID: 2100000, guid: d49b37c8450c153489b20866a570cc9f, type: 2}
   - first:
