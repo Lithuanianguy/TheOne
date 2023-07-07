@@ -12,6 +12,8 @@ public class InteractableHands : InteractableObject
 
     public OpenDeksel deksel;
 
+    public AudioSource turnl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class InteractableHands : InteractableObject
         Debug.Log(newRotation);
         Debug.Log(Mathf.RoundToInt(transform.eulerAngles.y));
         int targetRotate = Mathf.RoundToInt(transform.eulerAngles.y) + 45;
+        turnl.Play();
         if (targetRotate >= 360)
             targetRotate -= 360;
         Debug.Log(targetRotate);

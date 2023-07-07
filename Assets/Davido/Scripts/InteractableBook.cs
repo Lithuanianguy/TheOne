@@ -16,9 +16,16 @@ public class InteractableBook : InteractableObject
     public Animator book;
 
     public Material cloak;
+    public GameObject clo;
+
+    private void Start()
+    {
+        
+    }
 
     public override void OnInteract(FirstPersonController fpController)
     {
+
         base.OnInteract(fpController);
         player.canMove = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -37,7 +44,16 @@ public class InteractableBook : InteractableObject
         Cursor.visible = false;
         spotL.SetBool("Dim", true);
         uiElement.SetActive(false);
-        //cloak.
-        
+        StartCoroutine(FadeIn());
+       
+    }
+
+    IEnumerator FadeIn()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            yield return new WaitForSeconds(0.001f);
+            cloak.SetFloat("_disolve", i + 1);
+        }
     }
 }

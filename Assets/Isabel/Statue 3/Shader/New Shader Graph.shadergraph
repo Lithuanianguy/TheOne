@@ -1171,7 +1171,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "49feaa6956e34a79b7a2916c45d195a9",
     "m_Id": 0,
-    "m_DisplayName": "DISOLVE",
+    "m_DisplayName": "disolve",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1948,10 +1948,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3f8331eb-c273-423f-a777-bb5d7b6b3544"
     },
-    "m_Name": "DISOLVE",
+    "m_Name": "disolve",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DISOLVE",
-    "m_DefaultReferenceName": "_DISOLVE",
+    "m_RefNameGeneratedByDisplayName": "disolve",
+    "m_DefaultReferenceName": "_disolve",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

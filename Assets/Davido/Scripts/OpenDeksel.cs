@@ -48,10 +48,8 @@ public class OpenDeksel : MonoBehaviour
         //anim go brr
         
         eyeclose.SetActive(true);
-      
-        newCam.SetActive(true);
-        player.SetActive(false);
-
+        Invoke("Eee", uiDelay);
+        
         deksel.SetBool("deksel", true);
         Invoke("EngelAan", engelDelay) ;
 
@@ -66,13 +64,15 @@ public class OpenDeksel : MonoBehaviour
        
         angelS.Play();
      
-        old.Stop();
+        old.volume = 0.2f;
         noise.Stop();
-       
+        angel.SetActive(true);
     }
 
     void Eee()
     {
         angel.SetActive(true);
+        newCam.SetActive(true);
+        player.SetActive(false);
     }
 }
