@@ -15,6 +15,8 @@ public class InteractableBook : InteractableObject
     public Animator spotL;
     public Animator book;
 
+    public Material cloak;
+
     public override void OnInteract(FirstPersonController fpController)
     {
         base.OnInteract(fpController);
@@ -35,6 +37,7 @@ public class InteractableBook : InteractableObject
         Cursor.visible = false;
         spotL.SetBool("Dim", true);
         uiElement.SetActive(false);
+        //cloak.
         
     }
 }

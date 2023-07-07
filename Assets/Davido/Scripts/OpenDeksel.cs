@@ -13,10 +13,19 @@ public class OpenDeksel : MonoBehaviour
     public InteractableHands[] hands;
 
     public Animator deksel;
+    public Animator angle;
 
     public GameObject angel;
 
     public GameObject newCam;
+
+    public float engelDelay;
+    public float uiDelay;
+
+    public AudioSource angelS;
+ 
+    public AudioSource old;
+    public AudioSource noise;
 
     public void CheckHands()
     {
@@ -39,18 +48,31 @@ public class OpenDeksel : MonoBehaviour
         //anim go brr
         
         eyeclose.SetActive(true);
-
-        player.SetActive(false);
-     
-        deksel.SetBool("deksel", true);
-
-        angel.SetActive(true);
-
+      
         newCam.SetActive(true);
-        
+        player.SetActive(false);
+
+        deksel.SetBool("deksel", true);
+        Invoke("EngelAan", engelDelay) ;
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-      
+    }
+    void EngelAan()
+    {
+        angle.SetBool("go", true);
+        Invoke("Eee", uiDelay);
 
+       
+        angelS.Play();
+     
+        old.Stop();
+        noise.Stop();
+       
+    }
+
+    void Eee()
+    {
+        angel.SetActive(true);
     }
 }

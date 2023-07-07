@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Church.unity
     guid: 0ff2b0479f0fec248aa8cb942df49753
+  - enabled: 1
+    path: Assets/End.unity
+    guid: 3c35a294fd3fc494b8d7ddf5484c55d6
   m_configObjects: {}

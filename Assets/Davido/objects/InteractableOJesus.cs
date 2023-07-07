@@ -9,7 +9,7 @@ public class InteractableOJesus : InteractableObject
 {
 
     public GameObject theObjects;
-    public Animator doorangel;
+    public AudioSource horn;
     public GameObject theLights;
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class InteractableOJesus : InteractableObject
             theObjects.SetActive(true);
 
             theLights.SetActive(false);
-            
+            horn.Play();
             canInteract=false;
 
         }
